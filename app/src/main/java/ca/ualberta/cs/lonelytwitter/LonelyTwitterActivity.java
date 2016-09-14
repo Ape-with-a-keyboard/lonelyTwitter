@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -39,6 +40,23 @@ public class LonelyTwitterActivity extends Activity {
 			public void onClick(View v) {
 				setResult(RESULT_OK);
 				String text = bodyText.getText().toString();
+
+				Tweet newTweet = new NormalTweet(text);
+				try {
+					newTweet.setMessage("This is a tweet");
+				} catch (Tweettoolongexception tweettoolongexception) {
+					tweettoolongexception.printStackTrace();
+				}
+				ImportantTweet newstImportantTweet = new ImportantTweet(text);
+				newstImportantTweet.getMessage();
+				newstImportantTweet.isImportant();
+
+				String test = newTweet.getMessage();
+
+				ArrayList<Tweet> tweetList = new ArrayList<Tweet>();
+				tweetList.add(newTweet);
+				tweetList.add(newstImportantTweet);
+
 				saveInFile(text, new Date(System.currentTimeMillis()));
 				finish();
 
