@@ -100,7 +100,6 @@ public class LonelyTwitterActivity extends Activity {
 
 			Gson gson = new Gson();
 
-			//Code from stackoverflow
 			Type listType = new TypeToken<ArrayList<NormalTweet>>(){}.getType();
 
 			tweetList = gson.fromJson(in,listType);
