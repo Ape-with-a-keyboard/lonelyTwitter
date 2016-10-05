@@ -5,6 +5,14 @@ import java.util.Date;
 /**
  * Created by watts1 on 9/13/16.
  */
+
+/**
+ * This is the class Tweet of LonelyTwitter project. <p>It defines all the charachteristic
+ * of a Tweet</p>
+ * @since 1.0
+ * @author vinsonlai
+ */
+
 public abstract class Tweet {
     private String message;
     private Date date;

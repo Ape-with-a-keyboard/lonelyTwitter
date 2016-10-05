@@ -14,6 +14,14 @@ import java.util.Date;
 /**
  * Created by vinsonlai on 2016-09-27.
  */
+
+/**
+ * This is the TweetList class of LonelyTwitter project. <p>It includes alot of helper functions
+ * for modify and getting info from tweets list</p>
+ * @since 1.0
+ * @author vinsonlai
+ */
+
 public class TweetList {
     List<Tweet> tweets = new ArrayList<Tweet>();
     public boolean addTweet(Tweet tweet) {
