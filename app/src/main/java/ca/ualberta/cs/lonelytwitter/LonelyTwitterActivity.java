@@ -27,8 +27,31 @@ import android.widget.ListView;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+/**
+ * This is the main view class of LonelyTwitter project. <p>It handles all
+ * user interactions as well as file manipulations.</p>
+ * <pre>ALL the files are stored in the form of "json" files stored in Emulator's,
+ * accessible from Android Device Monitor.</pre>
+ * <code>Pseudo code Sample:
+ * open some file ...
+ * attach som text...
+ * close the file.
+ * </code>
+ * <ol>
+ *     <li>an item</li>
+ *     <li>another....</li>
+ * </ol>
+ * @since 1.0
+ * @see NormalTweet
+ * @author vinsonlai
+ */
+
 public class LonelyTwitterActivity extends Activity {
 
+	/**
+	 * This is the file name that is being saved / loaded and contains all the tweets.
+	 * @see #saveInFile()
+	 */
 	private static final String FILENAME = "file.sav";
 	private EditText bodyText;
 	private ListView oldTweetsList;
@@ -87,12 +110,16 @@ public class LonelyTwitterActivity extends Activity {
 		// TODO Auto-generated method stub
 		super.onStart();
 //		String[] tweets = loadFromFile();
-		loadFromFile();
+// 	loadFromFile();
 		adapter = new ArrayAdapter<Tweet>(this,
 				R.layout.list_item, tweetList);
 		oldTweetsList.setAdapter(adapter);
 	}
 
+	/**
+	 * This method loads the tweets from FILENAME(file.save), and..
+	 * @exception RuntimeException
+	 */
 	private void loadFromFile() {
 		try {
 			FileInputStream fis = openFileInput(FILENAME);

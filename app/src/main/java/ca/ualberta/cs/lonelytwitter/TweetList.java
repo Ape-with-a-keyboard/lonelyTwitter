@@ -1,3 +1,10 @@
+/**
+ * Copyright (c) 2016 team 20, CMPUT301. University of Alberta. All Rights Reserved.
+ * You may use distribute and copy all parts of this code under terms and condition of
+ * University of Alberta and the Code of Student Behavior
+ * You can find the copy of licence at http://www.github.com/team20/...
+ * For further information, contact me at wankinvi@ualberta.ca
+ */
 package ca.ualberta.cs.lonelytwitter;
 
 import java.util.ArrayList;
